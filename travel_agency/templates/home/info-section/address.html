@@ -1,0 +1,66 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/medium-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="info-section-page">
+        <div class="containerInner">
+            <div class="info-layout">
+                <div class="info-panel">
+                    <div class="info-nav">
+                        <div class="info-navCell">
+                            <a href="{% url 'about-company' %}">О нас</a>
+                        </div>
+                        <div class="info-navCell">
+                            <a href="{% url 'department-contacts' %}">Контакты отделов</a>
+                        </div>
+                        <div class="info-navCell">
+                            <a class="is-active" href="{% url 'address' %}">Адрес и график работы</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-content">
+                    <h1>О компании / Адрес и график работы</h1>
+                    <div class="info-text">
+                        <hr>
+                        <br>
+                        <strong>График работы московского офиса:</strong>
+                        <ul>
+                            <li>Понедельник-пятница: с 9:00 до 19:00</li>
+                            <li>Суббота: с 10:00 до 15:00</li>
+                            <li>Воскресенье – 10:00 -15:00 (удаленно. касса не требуется).</li>
+                        </ul>
+                        <p>
+                            <strong>Касса для приема оплат</strong>
+                            в московском офисе работает по будням с 10:00 до 19:00
+                            <br>
+	                        Суббота – 10:00 – 15:00, воскресенье – выходной
+                        </p>
+                        <hr>
+                        <p>
+                            Адрес офиса в г. Москва: ул. Верхняя Масловка д. 20 стр. 3
+                            <br>
+                        </p>
+                        <p>
+                            Офис г. Ростов-на-дону, г. Тюмень, г. Санкт-Петербург, г. Кисловодск по будням с
+                            10:00 до 19:00, суббота с 10:00 до 15:00, воскресенье – выходной.
+                        </p>
+                        <p><strong>Проезд</strong><br></p>
+                        <p>
+                            Станция метро «Динамо» (выход-первый вагон из центра): пешком через
+                            Петровский парк (10 минут) или на автолайне №319, автобусах 22, 22к, 84
+                            (остановка между двумя выходами из метро) до остановки «Петровско-Разумовская аллея»,
+                            далее 100 м прямо до светофора и переход по наземному переходу через Верхнюю Масловку,
+                            далее направо мимо института «Гипронииавиапром» до торца здания, вход-отдельное крыльцо,
+                            ориентир – синяя вывеска с названием «Алеан» <span class="redactor-invisible-space"></span>
+                        </p>
+                        <p><img alt="" src="{% static '../media/img/css/map_1.gif' %}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

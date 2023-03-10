@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/small-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <!--Код кто-нибудь будет оценивать или главное чтобы красивым был?-->
+    <h1 class="text-center"><a href="{% url 'logout' %}">ВЫЙТИ ИЗ КАБИНЕТА</a></h1>
+{% endblock %}

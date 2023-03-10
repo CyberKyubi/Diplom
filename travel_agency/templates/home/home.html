@@ -1,0 +1,132 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/full-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="homeMain">
+        <div class="homeCountries">
+            <div class="containerInner">
+                <div class="homeProducts">
+                    <h2 class="homeProducts-header">Страны</h2>
+                    <div class="homeProducts-content">
+                        <div class="row u-rowGrid">
+                            {% for country in homepage %}
+                                <div class="homeProducts-item">
+                                    <a href="">  <!-- Когда сделают адекватное веб-программирование? -->
+                                        <div class="homeProducts-img">
+                                            <img class="zoom" src="{{ country.country_image.url }}"
+                                                 width="310" height="210">
+                                        </div>
+                                        <div class="country-title">
+                                            <div class="border-in-the-center">
+                                                <p>{{ country }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homeAdvantages">
+            <div class="containerInner">
+                <h2 class="homeAdvantages-header">
+                    Преимущества
+                </h2>
+                <div class="homeAdvantages-grid">
+                    <div class="homeAdvantages-item">
+                        <div class="homeAdvantages-item-container">
+                            <div class="homeAdvantages-itemIcon item1"></div>
+                            <div class="homeAdvantages-itemTitle">
+                                5 лет на рынке туризма
+                            </div>
+                            <div class="homeAdvantages-itemText">
+                                Знаем как Вас приятно удивить
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homeAdvantages-item">
+                        <div class="homeAdvantages-item-container">
+                            <div class="homeAdvantages-itemIcon item2"></div>
+                            <div class="homeAdvantages-itemTitle">
+                                10 млн довольных туристов
+                            </div>
+                            <div class="homeAdvantages-itemText">
+                                Знаем как организовать идеальное путешествие.
+                                <br>
+                                На связи со своими клиентами,
+                                <br>
+                                даже во время отдыха
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homeAdvantages-item">
+                        <div class="homeAdvantages-item-container">
+                            <div class="homeAdvantages-itemIcon item3"></div>
+                            <div class="homeAdvantages-itemTitle">
+                                Безопасные условия оплаты
+                            </div>
+                            <div class="homeAdvantages-itemText">
+                                Оплата без комиссии посредникам
+                                <br>
+                                Беспроцентная рассрочка
+                                <br>
+                                Предоплата от 30%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homeReplies">
+            <div class="containerInner">
+                <h2 class="homeReplies-header">
+                    Отзывы путешественников
+                </h2>
+                <div class="homeReplies-container">
+                    <div class="homeReplies-containerInner">
+                        {% for reply in replies %}
+                            <div class="homeReplies-containerInner-item">
+                                <div class="item-container">
+                                    <div class="containerInner-itemTop">
+                                        <div class="containerInner-itemName">
+                                            <p>{{ reply.user.username }} {{ reply.user.last_name }}</p>
+                                        </div>
+                                        <div class="containerInner-itemCountry">
+                                            <p>путешествовал(а) по
+                                                <br>
+                                                <a href="">{{ reply.get_country_display }}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="containerInner-itemContent">
+                                        <div class="itemContent-stars">
+                                            <!-- Очень простая реализация рейтинга.
+                                             Ведь код этот никто оценивать не будет. :( -->
+                                            <span><img src="{% static '../media/ico/star.png'%}"></span>
+                                            <span><img src="{% static '../media/ico/star.png'%}"></span>
+                                            <span><img src="{% static '../media/ico/star.png'%}"></span>
+                                            <span><img src="{% static '../media/ico/star.png'%}"></span>
+                                            <span><img src="{% static '../media/ico/star.png'%}"></span>
+                                            <span class="date-created">{{ reply.date_created }}</span>
+                                        </div>
+                                        <div class="itemContent-Text">
+                                            <p>{{ reply.text }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href='{% static "/css/app.css" %}'>
+    <link rel="icon" href='{% static "../media/ico/title.png" %}' type="image/icon type">
+
+    <title>Алиса в стране чудес</title>
+</head>
+<body>
+    <div class="page">
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+
+        <div class="footer">
+            <div class="containerInner">
+                <div class="footer-body">
+                    <div class="footer-bodyTop">
+                        <div class="footer-nav">
+                            <h3 class="footer-navTitle">Способы оплаты</h3>
+                            <div class="footer-navBody">
+                                <img src="{% static '../media/ico/mir.svg'%}" class="payment-ico">
+                                <img src="{% static '../media/ico/visa.svg'%}" class="payment-ico">
+                                <img src="{% static '../media/ico/mastercard.svg'%}" class="payment-ico-mastercard">
+                            </div>
+                        </div>
+                        <div class="footer-nav">
+                            <h3 class="footer-navTitle">Билеты</h3>
+                            <div class="footer-navBody">
+                                <ul>
+                                    <li><a href="{% url 'tickets' %}">Авиа и ж/д билеты</a></li>
+                                    <li><a href="{% url 'booking-rules' %}">Правила бронирования</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav">
+                            <h3 class="footer-navTitle">Туристам</h3>
+                            <div class="footer-navBody">
+                                <ul>
+                                    <li><a href="{% url 'sales-department' %}">Отдел продаж</a></li>
+                                    <li><a href="{% url 'booking-conditions' %}">Условия бронирования</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav">
+                            <h3 class="footer-navTitle">О компании</h3>
+                            <div class="footer-navBody">
+                                <ul>
+                                    <li><a href="{% url 'about-company' %}">О нас</a></li>
+                                    <li><a href="{% url 'department-contacts' %}">Контакты отделов</a></li>
+                                    <li><a href="{% url 'address' %}">Адрес и график работы</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-container-Middle">
+                        <div class="footer-copyright">
+                            <p>© Национальный туроператор «Алиса в стране чудес», официальный сайт. Все права защищены.</p>
+                        </div>
+                    </div>
+                    <div class="footer-container-Bottom">
+                        <div class="footer-developer">
+                            <h4>By CyberKyubi</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

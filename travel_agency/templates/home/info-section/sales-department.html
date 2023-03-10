@@ -1,0 +1,345 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/medium-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="info-section-page">
+        <div class="containerInner">
+            <div class="info-layout">
+                <div class="info-panel">
+                    <div class="info-nav">
+                        <div class="info-navCell">
+                            <a class="is-active" href="{% url 'sales-department' %}">Отдел продаж</a>
+                        </div>
+                        <div class="info-navCell">
+                            <a href="{% url 'booking-conditions' %}">Условия бронирования</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-content">
+                    <h1>Туристам / Отдел продаж</h1>
+                    <div class="info-text">
+                        <hr>
+                        <br>
+                        <p>
+                            Если у вас останутся вопросы, вы всегда можете задать их по телефону,
+                            электронной почте менеджеров или на <a href="mailto:seller@alice.ru ">seller@alice.ru</a>
+                            или приехать в офис по адресу: <strong>г. Москва, ул. Верхняя Масловка, 20. </strong>
+                        </p>
+                        <hr>
+                        <table class="table-bordered text-center" style="margin: 15px 0px; width: 100%;">
+                            <tbody>
+                                <tr class="bg-info">
+                                    <td width="247">
+                                        Фамилия, имя
+                                    </td>
+                                    <td width="226">
+                                        Должность
+                                    </td>
+                                    <td width="70">
+                                        Электронный адрес
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Шпильман Анна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Руководитель департамента розничных продаж
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><u><a href="mailto:a.shpilmsn@alice.ru" target="_blank">a.shpilman@alice.ru</a></u>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Рокунова Марина
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Заместитель руководителя департамента   розничных продаж
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><u><a href="mailto:m.rokunova@alice.ru">m.rokunova@alice.ru</a></u>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Булавинцева Ольга
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:o.bulavintseva@alice.ru">o.bulavintseva@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Данилина Виктория
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:v.danilina@alice.ru">v.danilina@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Иванисова Олеся
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:o.ivanisova@alice.ru">o.ivanisova@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Климова Анна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:a.klimova@alice.ru">a.klimova@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Копцова Мария
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:m.koptsova@alice.ru">m.koptsova@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Мирзоян Джульетта
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:j.mirzoyan@alice.ru">j.mirzoyan@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Никитюк Ульяна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:u.nikityuk@alice.ru">u.nikityuk@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Пронина Любовь
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:l.pronina@alice.ru">l.pronina@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Пяткина Дина
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:d.pyatkina@alice.ru">d.pyatkina@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Родионова Татьяна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:t.rodionova@alice.ru">t.rodionova@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Татаринцева Яна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:y.tatarintseva@alice.ru">y.tatarintseva@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Чуркина Анна
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Менеджер
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:a.churkina@alice.ru">a.churkina@alice.ru</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Дулина Ольга
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ведущий специалист по сопровождению продаж
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Игнатьева Кристина
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Специалист по сопровождению продаж
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Федосеенкова Дария
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Специалист по сопровождению продаж
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Емельянова Ксения
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ассистент
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Обухова Елена
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ассистент
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Смирнова Александра
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ассистент
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Свкова Валерия
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ассистент
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Шкода София
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>Ассистент
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

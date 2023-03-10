@@ -1,0 +1,57 @@
+{% load static %}
+
+<div class="homeTop-small-size">
+    <div class="header">
+        <div class="header-containerInner">
+            <div class="header-inner">
+                <div class="header-cell">
+                    <a href="{% url 'homepage' %}" class="header-logo"></a>
+                </div>
+                <div class="header-cell">
+                    <div class="header-contacts">
+                        <div class="header-phone">
+                            <div class="header-phoneNumberText">
+                                <a href="tel:+74952300300">
+                                    +7 (495) 2-300-300
+                                </a>
+                                <div class="header-officeHours">
+                                    c 09:00 до 19:00 в будни
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    <div class="header-info">
+                        <a href="{% url 'tickets' %}" class="info">
+                            <i class="icon-info"></i>
+                            <span class="infoText">Полезное</span>
+                        </a>
+                    </div>
+                    <div class="header-user-account">
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'cabinet' %}" class="user-account">
+                            <i class="icon-user-account"></i>
+                            <span class="user-accountText">Личный кабинет</span>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'login' %}" class="user-account">
+                            <i class="icon-user-account"></i>
+                            <span class="user-accountText">Личный кабинет</span>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="info-section-container">
+                    <ul class="info-section-navigationTop">
+                        <li><a href="{% url 'tickets' %}">Билеты</a></li>
+                        <li><a href="{% url 'sales-department' %}">Туристам</a></li>
+                        <li><a href="{% url 'about-company' %}">О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

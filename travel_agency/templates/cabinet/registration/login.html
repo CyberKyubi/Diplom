@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/small-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="profile-auth-form">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="profile-auth-container">
+            <h2 class="profile-auth-Title">Войти в личный кабинет</h2>
+            {% for message in messages %}
+                <div class="alert-info">{{ message }}</div>
+            {% endfor %}
+            {% for field in login_form %}
+                <div class="input-field">
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button class="action-button" type="submit">Войти</button>
+            <p class="profile-auth-redirection">
+                Еще нет кабинета?
+                <br>
+                <a href="{% url 'registration' %}">Создать</a>
+            </p>
+        </div>
+    </form>
+</div>
+{% endblock %}

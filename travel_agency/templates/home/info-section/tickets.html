@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+    {% include 'base/medium-size-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="info-section-page">
+        <div class="containerInner">
+            <div class="info-layout">
+                <div class="info-panel">
+                    <div class="info-nav">
+                        <div class="info-navCell">
+                            <a class="is-active" href="{% url 'tickets' %}">Авиа и ж/д билеты</a>
+                        </div>
+                        <div class="info-navCell">
+                            <a href="{% url 'booking-rules' %}">Правила бронирования</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-content">
+                    <h1>Билеты / Авиа и ж/д билеты</h1>
+                    <div class="info-text">
+                        <hr>
+                        <br>
+                        <h2>Авиабилеты</h2>
+                        <p>
+                            Предлагаем перелеты на регулярных рейсах авиакомпаний
+                            «<strong>Аэрофлот</strong>», «<strong>S7 (Сибирь)</strong>», «<strong>ЮтЭйр</strong>»,
+		                    «<strong>ВимАвиа</strong>»
+		                    <strong>«Уральские авиалинии» U6, «ИжАвиа»(I8), «Скат»(DV). </strong>
+	                    </p>
+                        <p>
+                            <strong></strong>По данным направлениям вы можете забронировать пакетный
+                            тур самостоятельно на нашем сайте или с помощью менеджера по телефону 8 (495) 2-300-300
+	                    </p>
+                        <hr>
+                        <h2>Ж/Д билеты</h2>
+                        <p>Для оформления ЖД билета нужны данные:</p>
+                        <ul>
+                            <li>ФИО полностью</li>
+                            <li>Паспорт / свидетельство о рождении у детей до 14 лет</li>
+                            <li>Дата рождения</li>
+                            <li>Гражданство</li>
+                            <li>Можно присылать копию первой страницы паспорта и свидетельства</li>
+	                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
